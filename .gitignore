@@ -1,1 +1,8 @@
 .idea
+**/*.iml
+.gitignore
+DemoForFlowRecord
+javamesh-samples/javamesh-flowrecord/flowrecord-plugin/src/main/java/com/huawei/flowrecord/plugins/mysql
+javamesh-samples/javamesh-flowrecord/flowrecord-plugin/src/main/resources/config.properties
+javamesh-samples/javamesh-flowrecord/flowrecord-plugin/src/main/resources/config-test.properties
+javamesh-samples/javamesh-flowrecord/flowrecord-plugin/src/main/resources/config-prod.properties
