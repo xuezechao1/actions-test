@@ -22,6 +22,19 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
           cache: maven
+      - name: Run java checkstyle
+        uses: nikitasavinov/checkstyle-action@0.4.0
+        with:
+          github_token: ${{ github.token }}
+          level: info
+          reporter: github-pr-check
+
+          filter_mode: added
+          fail_on_error: false
+          checkstyle_config: google_checks.xml
+          checkstyle_version: 8.40
+          workdir: .
+          tool_name: reviewdog
       - name: Build with Maven
         run: |
           mvn -B package -DskipTests --file pom.xml
