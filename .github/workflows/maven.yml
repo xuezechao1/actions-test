@@ -29,7 +29,7 @@ jobs:
       - name: checkstyle
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ github.token }}
-        run: java -jar checkstyle.jar -c ${{ github.workspace }}/google_checks.xml -f xml src
+        run: java -jar checkstyle.jar -c ${{ github.workspace }}/google_checks.xml -f xml ${{ github.workspace }}
   build:
     needs: [checkstyle]
     runs-on: ubuntu-latest
